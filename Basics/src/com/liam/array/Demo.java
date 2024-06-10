@@ -23,6 +23,7 @@ public class Demo {
         double avgWeight = totalWeight / 6;
 
         System.out.println("总体重= " + totalWeight + "平均体重= " + avgWeight );
-
     }
 }
+
+//二维数组 pass;
