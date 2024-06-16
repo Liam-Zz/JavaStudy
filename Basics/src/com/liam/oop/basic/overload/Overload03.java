@@ -6,6 +6,9 @@ public class Overload03 {
         methods.m(6);
         methods.m(6,5);
         methods.m("Hello World");
+
+        double max = methods.max(1.1, 1.1, 4);
+        System.out.println(max);
     }
 }
 
@@ -22,5 +25,21 @@ class Methods{
     }
     public void m(String n1){
         System.out.println(n1);
+    }
+
+    public int max(int n1,int n2){
+        return Math.max(n1, n2);
+    }
+
+    public  double max(double n1,double n2){
+        return Math.max(n1, n2);
+    }
+
+    public double max(double n1,double n2,double n3){
+        if (n1 > n2){
+            return n1;
+        }else {
+            return Math.max(n2, n3);
+        }
     }
 }
