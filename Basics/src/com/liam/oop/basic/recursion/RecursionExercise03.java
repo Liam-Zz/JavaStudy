@@ -6,6 +6,8 @@ public class RecursionExercise03 {
             迷宫问题
                 1.先创建迷宫,二维数组
                 2.0 表示可以通行,1 表示障碍物
+
+            如何求出最短路径?
          */
         int[][] map = new int[8][7];
         //将最上面和最下面的全部设置为 1
@@ -21,6 +23,8 @@ public class RecursionExercise03 {
         //障碍物设置
         map[3][1] = 1;
         map[3][2] = 1;
+        //测试回溯
+        map[2][2] = 1;
 
         //输出地图
         System.out.println("地图");
