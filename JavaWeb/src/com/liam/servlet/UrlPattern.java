@@ -14,6 +14,7 @@ import java.io.IOException;
 /*
     default-servlet: 默认提供的servlet
     请求资源（静态资源等）跟servlet没有匹配上就会跟default链接
+    SpringMVC中会失效，需要调试配置
  */
 public class UrlPattern extends HttpServlet {
     @Override
