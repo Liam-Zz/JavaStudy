@@ -44,4 +44,56 @@
         <url-pattern>/url1</url-pattern>
         <url-pattern>/url2</url-pattern>
     </servlet-mapping>-->
+
+   <!-- <servlet>
+    <servlet-name>HelloWorld</servlet-name>
+    <servlet-class>com.liam.servlet.ServletConfigServlet01</servlet-class>
+    &lt;!&ndash;
+        配置servlet的初始参数
+        Tomcat可读取该信息
+    &ndash;&gt;
+    <init-param>
+        <param-name>keya</param-name>
+        <param-value>valuea</param-value>
+    </init-param>
+    <init-param>
+        <param-name>keyb</param-name>
+        <param-value>valueb</param-value>
+    </init-param>
+
+</servlet>
+    <servlet-mapping>
+        <servlet-name>HelloWorld</servlet-name>
+        <url-pattern>/config</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>HelloWorld02</servlet-name>
+        <servlet-class>com.liam.servlet.ServletConfigServlet02</servlet-class>
+        &lt;!&ndash;
+            配置servlet的初始参数
+            Tomcat可读取该信息
+        &ndash;&gt;
+        <init-param>
+            <param-name>keyc</param-name>
+            <param-value>valuec</param-value>
+        </init-param>
+        <init-param>
+            <param-name>keyd</param-name>
+            <param-value>valued</param-value>
+        </init-param>
+
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloWorld02</servlet-name>
+        <url-pattern>/config02</url-pattern>
+    </servlet-mapping>-->
+    <context-param>
+        <param-name>encoding</param-name>
+        <param-value>UTF-8</param-value>
+    </context-param>
+    <context-param>
+        <param-name>username</param-name>
+        <param-value>liam</param-value>
+    </context-param>
 </web-app>
