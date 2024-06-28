@@ -1,4 +1,4 @@
-package com.liam.servlet;
+package com.liam.demo.servlet;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
@@ -10,12 +10,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Enumeration;
-
 @WebServlet(
-        urlPatterns = "/config1",
-        initParams = {@WebInitParam(name="key1",value = "value1"),@WebInitParam(name="key2",value = "value2")}
+        urlPatterns = "/config2",
+        initParams = {@WebInitParam(name="key3",value = "value3"),@WebInitParam(name="key4",value = "value4")}
 )
-public class ServletConfigServlet01 extends HttpServlet {
+public class ServletConfigServlet02 extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("config 获取参数-----------------------------------------------");
@@ -27,12 +26,12 @@ public class ServletConfigServlet01 extends HttpServlet {
         //如果不知道参数值，获取所有的参数名
         Enumeration<String> initParameterNames = servletConfig.getInitParameterNames();
 
-            while (initParameterNames.hasMoreElements()){
-                String kname = initParameterNames.nextElement();
-                System.out.println(kname+"="+getInitParameter(kname));
+        while (initParameterNames.hasMoreElements()){
+            String kname = initParameterNames.nextElement();
+            System.out.println(kname+"="+getInitParameter(kname));
         }
         System.out.println("config 获取参数-----------------------------------------------");
-            //获取context对象
+        //获取context对象
         ServletContext servletContext = getServletContext();
         ServletContext servletContext1 = servletConfig.getServletContext();
         ServletContext servletContext2 = req.getServletContext();
@@ -47,15 +46,8 @@ public class ServletConfigServlet01 extends HttpServlet {
             String pname = initParameterNames1.nextElement();
             System.out.println(pname+"="+servletContext+getInitParameter(pname));
         }
-        //作为域对象一定会有的API
-        //ps: servletContext 对象名程序员一般起名为“application”
-        //1、存储修改数据
-        servletContext.setAttribute("ka","va");
-        servletContext.setAttribute("ka","vaa");
-        //2、获取域中数据
-        //String ka = (String)servletContext.getAttribute("ka");
-        //3、移除域中数据
-        //servletContext.removeAttribute("ka");
-
+        //从 域对象中读取数据
+        String ka = (String)servletContext.getAttribute("ka");
+        System.out.println("域名对象：" + ka);
     }
 }

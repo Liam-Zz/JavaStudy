@@ -1,4 +1,4 @@
-package com.liam.xml;
+package com.liam.demo.xml;
 
 import org.dom4j.Attribute;
 import org.dom4j.Document;

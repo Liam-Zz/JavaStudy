@@ -1,4 +1,4 @@
-package com.liam.servlet;
+package com.liam.demo.servlet;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
