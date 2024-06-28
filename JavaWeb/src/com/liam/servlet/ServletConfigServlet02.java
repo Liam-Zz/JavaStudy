@@ -46,5 +46,8 @@ public class ServletConfigServlet02 extends HttpServlet {
             String pname = initParameterNames1.nextElement();
             System.out.println(pname+"="+servletContext+getInitParameter(pname));
         }
+        //从 域对象中读取数据
+        String ka = (String)servletContext.getAttribute("ka");
+        System.out.println("域名对象：" + ka);
     }
 }

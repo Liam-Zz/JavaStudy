@@ -47,6 +47,15 @@ public class ServletConfigServlet01 extends HttpServlet {
             String pname = initParameterNames1.nextElement();
             System.out.println(pname+"="+servletContext+getInitParameter(pname));
         }
+        //作为域对象一定会有的API
+        //ps: servletContext 对象名程序员一般起名为“application”
+        //1、存储修改数据
+        servletContext.setAttribute("ka","va");
+        servletContext.setAttribute("ka","vaa");
+        //2、获取域中数据
+        //String ka = (String)servletContext.getAttribute("ka");
+        //3、移除域中数据
+        //servletContext.removeAttribute("ka");
 
     }
 }
