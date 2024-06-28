@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outerDiv{
+            width: 600px;
+            height: 600px;
+            border: 1px solid ;
+            background-color: beige;
+            margin: 10px auto;
+        }
+        .innerDiv{
+            width: 100px;
+            height: 100px;
+            border: 1px solid;
+            /*修改为行内元素*/
+            /*display: inline; 效果不好,缺失了块元素的特征*/
+            float: left;
+        }
+        .d1{
+            background-color: aquamarine;
+            margin-right: 10px;
+            margin-top: 10px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+
+        }
+        .d2{
+            background-color: rgb(86, 54, 230);
+            /*与 div 重叠,但文字会被挤到下面*/
+            margin-left: 10px;
+            /*上右下左*/
+            margin: 10px 20px 30px 40px;
+        }
+        .d3{
+            background-color: rgb(122, 235, 47);
+        }
+        /*
+        width 宽 px(容量)
+        height 高 px(容量)
+        border 边线(外部添加一个像素空间,不侵占盒子容量)
+        外边距(margin): 根据边线向外扩展;
+        内边距(padding): 根据边线向内扩展
+        
+        */
+    </style>
+</head>
+<body>
+    <div class="outerDiv">
+        <div class="innerDiv d1">div1</div>
+        <div class="innerDiv d2">div2</div>
+        <div class="innerDiv d3">div3</div>
+    </div>
+    
+</body>
+</html>

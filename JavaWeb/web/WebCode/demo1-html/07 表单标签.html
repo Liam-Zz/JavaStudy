@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        表单标签 <form> 是向服务端发送数据的主要方式之一
+            action: 用于定义数据的提交地址
+                1.url
+                2.相对路径
+                3.绝对路径
+            method: 用于定义数据的提交方式
+                1.GET
+                    参数以键值对形式放在 url 后提交; key&value
+                    缺点: 数据暴露在地址栏,相对不安全,url 地址栏长度有限制(4k)
+                2.POST
+                    参数默认不放到 URL 中,数据不会暴露在地址栏,相对安全;
+                    数据通过请求体发送,提交数据量较大
+                    请求体可包含字符,字节;
+                    相较于 GET 请求效率较低
+                3.PUT
+                4.DELETE
+
+            input :表单项标签
+                type: 表单输入类型
+                    1.text(普通文本框)
+                    2.password(密码框)
+                    3.submit(提交按钮)
+                    4.reset(重置按钮)
+                    5.radio(单选框,name 值相同时会互斥)
+                    6.checkbox(复选框)
+                    7.hidden(隐藏域,不现实页面,提交时会携带)
+            textarea: 多行文本框
+    -->
+    <form action="08%20Welcmoe.html" method="post">
+        <!--
+            添加表单项,用户输入的信息
+            表单项标签一定要定义 name 属性,该属性用于明确提交的 key;
+            表单项还需要定义 value 属性,该属性用于明确提交的实参
+        -->
+            用户名:<input type="text" name="username" value="请输入用户名"/><br>
+            <!-- txt 密码为明文-->
+            密码:  <input type="password" name="password"/><br>
+            <input type="submit" value="登录">
+            <input type="reset" value="清空">
+    </form>
+    
+</body>
+</html>

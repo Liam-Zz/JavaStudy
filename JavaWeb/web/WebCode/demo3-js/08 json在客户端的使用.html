@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        对象可以用与存储数据
+
+        那 js 和 java 交互数据用什么传递?
+            通过 json 格式(特定的字符串语法结构,json 格式的字符串,在前后端可以很方便的和对象之间进行交换)
+
+        js 格式语法
+            var personStr = '{"属性名":"属性值","属性名":"属性值","属性名":{},"属性名":["","",],"属性名":[{},{}]}'
+            属性名必须用 "" 包含
+            属性值如果是字符串类型必须用 "" 包含, 数字可以不处理
+            多个属性名可以用 , 隔开
+            属性名值可以为对象,数组
+        */
+       //这是 json 格式的字符串
+        var persionStr = '{"name":"张三","age":12,"dog":{"dname":"小花"},"start":["吴彦祖","刘德华"]}'
+        console.log(persionStr)
+        console.log(typeof persionStr)
+
+        //将 json 转换为对象
+        var persion = JSON.parse(persionStr)
+
+        //需要转换为对象才能访问
+        console.log(persion)
+        console.log(persion.name)
+        console.log(persion.dog.dname)
+
+        //json 对象转换为字符串
+        var persion2 = JSON.stringify(persion)
+        console.log(persion2)
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

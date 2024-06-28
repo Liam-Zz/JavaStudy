@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        创建对象
+        方式一:
+            new Object
+        方式二:
+            {属性名:属性值...函数名:function}
+
+        */
+       var persion = new Object()
+       //对象的属性? 对象的方法? 直接手动添加
+       persion.name = "张三"
+       persion.age = 18;
+       persion.eat=function(food){
+        console.log("方法: " + this.age +"\t" + this.name + food)
+       }
+
+       //访问属性
+       console.log(persion.name)
+
+       //访问方法
+       persion.eat("火锅")
+
+
+       var Persion1 = {
+            "name":"李四",
+            "age":10,
+            "eat":function(food){
+                console.log("方法: " + this.age +"\t" + this.name + food)
+            }
+       }
+
+       console.log(Persion1.name)
+       Persion1.eat("臭豆腐")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

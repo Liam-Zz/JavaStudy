@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        JS
+            数据类型
+            运算符
+            流程控制
+            函数
+            变量
+
+            数组的创建方式;
+            数组的 API
+
+        */
+
+        var arr = new Array()
+        console.log(arr)
+        console.log(arr.length)
+
+        //向数据里添加元素
+        arr[0] = "张三"
+        arr[1] = 18
+        arr[9] = true
+        arr.length = 20
+        console.log(arr)
+        console.log(arr.length)
+
+        var arr01 = new Array(5)
+        console.log(arr01)
+        console.log(arr01.length)
+
+        var arr02 = new Array(1,2,3)
+        console.log(arr02)
+        console.log(arr02.length)
+
+        var arr03 = [1,2,3]
+        console.log(arr03)
+        console.log(arr03.length)
+
+        //数组 API 使用
+        var fruits = ["apple","orange","banana"]
+        var fruits02 = ["荔枝","榴莲","桃子","榴莲","李子"]
+        //合并数组
+        var fruitsall = fruits.concat(fruits02)
+        console.log(fruits)
+        console.log(fruits02)
+        console.log(fruitsall)
+        //删除最后一个元素
+        var res = fruits02.pop()
+        console.log(fruits02)
+        console.log(fruitsall) 
+        //向尾端增加,返回长度
+        var len = fruitsall.push("葡萄")
+        console.log(len)
+        console.log(fruitsall)
+        //搜索数组
+        var indes = fruitsall.indexOf('榴莲')
+        var indes1 = fruitsall.lastIndexOf('榴莲')
+        console.log(indes)
+        console.log(indes1)
+        //反转数组顺序
+        fruitsall.reverse()
+        console.log(fruitsall)
+        //转换为字符串
+        console.log(fruitsall.join("-"))
+
+        //截取数组一部分,返回新数组
+        console.log(fruitsall.slice(2,6))
+
+        //移除增加数组元素
+        console.log(fruitsall)
+        console.log(fruitsall.splice(2,0,'el1','el2'))
+        console.log(fruitsall)
+
+    
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

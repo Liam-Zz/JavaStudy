@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //简单写法
+        window.onload = function(){
+                //同多 Dom 编程获得要操作的元素
+                var btn = document.getElementById("btn1")
+                //绑定单击事件
+                btn.onclick = function(){
+                 alert("按钮单击了")
+                 //通过 dom编程触发,相当于某些事件发生了
+                 //触发事件
+                 div1.onclick()
+         }
+                var div1 = document.getElementById("d1")
+                div1.onclick=function(){
+                div1.style.backgroundColor ="red"
+            }
+        }
+
+      /*  function ready(){
+            //同多 Dom 编程获得要操作的元素
+            var btn = document.getElementById("btn1")
+            //绑定单击事件
+             btn.onclick = function(){
+                 alert("按钮单击了")
+         }
+        }*/
+
+
+        
+         
+    </script>
+    <style>
+        .div1{
+            width: 100px;
+            height: 100px;
+            background-color: bisque;
+        }
+    </style>
+</head>
+<!--简单写法,无需执行(onload="ready()")-->
+<body>
+    <div id="d1" class="div1">
+
+    </div>
+    <button id="btn1">按钮</button>
+
+</body>
+</html>

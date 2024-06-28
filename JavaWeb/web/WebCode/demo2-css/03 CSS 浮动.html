@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outerDiv{
+            width: 600px;
+            height: 600px;
+            border: 1px solid ;
+            background-color: beige;
+        }
+        .innerDiv{
+            width: 100px;
+            height: 100px;
+            border: 1px solid;
+            /*修改为行内元素*/
+            /*display: inline; 效果不好,缺失了块元素的特征*/
+        }
+        .d1{
+            background-color: aquamarine;
+            /*向右浮动*/
+            float: left;
+        }
+        .d2{
+            background-color: rgb(86, 54, 230);
+            /*与 div 重叠,但文字会被挤到下面*/
+
+        }
+        .d3{
+            background-color: rgb(122, 235, 47);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="outerDiv">
+        <div class="innerDiv d1">div1</div>
+        <div class="innerDiv d2">div2</div>
+        <div class="innerDiv d3">div3</div>
+    </div>
+    
+</body>
+</html>

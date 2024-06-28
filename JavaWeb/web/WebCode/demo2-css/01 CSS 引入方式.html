@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 元素选择器 所有元素为 input 的标签都会生效*/
+        /*input{
+            width: 60px; 
+            height: 60px;
+            background-color: rgb(93, 80, 233);
+            color: aliceblue;
+            font-size: 20px;
+            font-family: '隶书';
+            border: 2px solid green;
+            border-radius: 5px;
+        }
+            */
+        /*引入 css 文件*/
+    </style>
+
+    <link href="css/btn.css" rel="stylesheet">
+</head>
+<body>
+    
+    <!--
+        引入方式
+            1.行内方式
+                通过元素的 style 属性引入样式
+                style="key:vlaue"
+                缺点: 代码复用性低,不利于维护;css 样式代码和 html 结构代码交织在一起影响阅读
+
+            2.内嵌式
+                在 head 标签中的 style 标签定义本页面的公共样式;
+                需要通过选择器来确定样式的作用元素;
+            
+            3.外部样式表
+                将 CSS 代码单独放入 .css 文件中,通过 head 中 link 标签引入
+    -->
+    
+    <input type="button" value="按钮" 
+    style="
+    width: 60px; 
+    height: 60px;
+    background-color: rgb(93, 80, 233);
+    color: aliceblue;
+    font-size: 20px;
+    font-family: '隶书';
+    border: 2px solid green;
+    border-radius: 5px;
+    ">
+
+    <input type="button" value="按钮2" >
+
+    <input type="button" value="按钮2" >
+
+</body>
+</html>

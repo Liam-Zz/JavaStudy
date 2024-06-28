@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        表格标签 <table> 
+            thead: 表头
+            tbody: 表体
+            tfoot: 表尾
+                tr: 表格中的一行
+                    td: 行中的一个单元格
+                    th: 自带加粗的效果的 td
+    -->
+    <h3 style="text-align: center;">员工技能竞赛评分表</h3>
+    <table border="1px" style="margin: 0 auto; width: 400px";>
+        <thead>
+            <tr>
+                <th>排名</th>
+                <th>姓名</th>
+                <th>分数</th>
+                <th>备注</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>小李</td>
+                <td>100</td>
+                <!--
+                    单元格跨行
+                -->
+                <td rowspan="6">前三名升职加薪</td>
+            </tr>
+            <tr> 
+                <td>2</td>
+                <td>小刘</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>小王</td>
+                <td>88</td>
+            </tr>
+            <tr>
+                <td>总人数</td>
+                <!--
+                    单元格跨列
+                -->
+                <td colspan="2">2000</td>
+            </tr>
+            <tr>
+                <td>平均分</td>
+                <td colspan="2">86</td>
+
+
+            </tr>
+            <tr>
+                <td>及格率</td>
+                <td colspan="2">80%</td>
+
+            </tr>
+
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        hsitroy
+        location
+        sessionStorage: 浏览器关闭数据清除
+        localStorage: 浏览器关闭数据不清楚
+        console: 控制台 log
+        */
+
+       function fun1(){
+            //向前翻页
+            window.history.back()
+       }
+       function fun2(){
+            //向后翻页
+            //window.history.forward()
+            //向后翻几页
+            history.go(1)
+       }
+       function fun3(){
+            //向前翻页
+            window.location.href = "http://www.atguigu.com" //膝盖地址栏 url
+       }
+       function fun4(){
+            //存储数据
+            window.sessionStorage.setItem("keya","value")
+             //存储数据
+            window.localStorage.setItem("keya1","value1")
+       }
+   
+
+
+       function fun5(){
+            //读取数据
+            console.log(window.sessionStorage.getItem("keya")) 
+            console.log(window.localStorage.getItem("keya1"))
+       }
+       function fun6(){
+            //清空数据
+            sessionStorage.removeItem("keya")
+            localStorage.removeItem("keya1")
+       }
+
+    </script>
+</head>
+<body>
+    <button onclick="fun1()">上一页</button>
+    <button onclick="fun2()">下一页</button>
+    <a href="http://www.baidu.com">百度</a>
+    <hr>
+    <button onclick="fun3()">跳转页面</button>
+    <hr>
+    <button onclick="fun4()">存储数据</button>
+    <button onclick="fun5()">读取数据</button>
+    <button onclick="fun6()">清空数据</button>
+</body>
+</html>

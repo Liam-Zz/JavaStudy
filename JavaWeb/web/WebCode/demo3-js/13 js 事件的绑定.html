@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        事件绑定方式
+        1.通过元素的属性绑定
+        2.通过 Dom 编程动态绑定
+        
+        注意事项:
+            一个事件可以同时绑定多个函数
+            一个元素可以同时绑定多个事件
+
+        常见事件:
+        1.鼠标事件: onclink ondbclink onmouserover...
+        2.键盘事件: onkeydown onkeyup
+        3.表单事件
+        4.页面加载事件
+
+        3.事件的触发
+            1.行为触发
+            2.Dom 行为触发
+
+
+        */
+       //定义单击绑定函数
+       function fun1(){
+       console.log("单击")
+       }
+       function fun2(){
+        console.log("单击 2")
+       }
+       function fun3(){
+        alert("双击")
+       }
+
+       function fun4(){
+        console.log("鼠标悬停了")
+       }
+       function fun5(){
+        console.log(" 鼠标移动了")
+       }
+       function fun6(){
+        console.log(" 鼠标离开了")
+       }
+       function fun7(){
+        console.log("键盘按下")
+       }
+       function fun8(){
+        console.log("键盘抬起")
+       }
+    </script>
+</head>
+<body>
+    <!--单击按钮实现 js 调用-->
+    <input 
+    type="button" 
+    value="按钮"
+    onclick="fun1(),fun2()"
+    ondblclick="fun3()"
+    >
+    <img src="img/img.png" onmouseover="fun4()" onmousemove="fun5()" onmouseleave="fun6()"><br>
+
+    <input type="text" onkeydown=" fun7()" onkeyup="fun8()">
+</body>
+</html>

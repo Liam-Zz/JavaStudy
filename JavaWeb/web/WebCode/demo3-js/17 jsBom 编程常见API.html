@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        windos 对象时由浏览器提供给我们使用的,无需 new
+        windos.可以省略不写
+        三种弹窗方式
+            laert
+            prompt
+            confirm
+
+        定时任务
+
+        */
+       function fun1(){
+            window.alert()
+       }
+       function fun2(){
+        var res = window.prompt("请输入姓名")
+        console.log(res)
+            
+       }
+       function fun3(){
+            window.confirm()
+       }
+       function fun4(){
+            window.setTimeout(function(){
+                console.log("hello")
+            },2000)
+       }
+    </script>
+</head>
+<body>
+    <button onclick="fun1()">信息提示框</button>
+    <button onclick="fun2()">信息输入框</button>
+    <button onclick="fun3()">信息确认框</button>
+
+    <button onclick="fun4()">两秒后向控制台打印 hello</button>
+</body>
+</html>
