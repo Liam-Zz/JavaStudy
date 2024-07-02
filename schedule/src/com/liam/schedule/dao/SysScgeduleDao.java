@@ -1,6 +1,9 @@
 package com.liam.schedule.dao;
 
 import com.liam.schedule.pojo.SysScgedule;
+
+import java.util.List;
+
 /*
     在接口中要写好文档规范
     作者：
@@ -19,4 +22,10 @@ public interface SysScgeduleDao {
      * @return 增加成功返回影响数据库记录的行数，行数为0说明增加失败；
      */
     int addSchedule(SysScgedule schedule);
+
+    /**
+     * 查询用户的所有日常
+     * @return 将所有日程放入 集合中返回
+     */
+    List<SysScgedule> findAll();
 }
