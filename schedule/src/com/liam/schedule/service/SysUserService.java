@@ -12,4 +12,11 @@ public interface SysUserService {
      * @return 注册成功返回 1 注册失败返回 0
      */
     int regist(SysUser sysUser);
+
+    /**
+     * 根据用户名获取用户完整信息的方法
+     * @param username 当前要查询的用户名
+     * @return 如果找到了返回SysUser的信息；
+     */
+    SysUser findByUsername(String username);
 }

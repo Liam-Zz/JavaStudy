@@ -3,6 +3,7 @@ package com.liam.schedule.controller;
 import com.liam.schedule.pojo.SysUser;
 import com.liam.schedule.service.SysUserService;
 import com.liam.schedule.service.impl.SysUserServiceImpl;
+import com.liam.schedule.util.MD5Util;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -56,6 +57,33 @@ public class SysUserController extends BaseContoller {
          }else {
             resp.sendRedirect("/registFail.html");
          }
+
+    }
+
+    /**
+     * 接受用于登录的请求
+     * @param req
+     * @param resp
+     * @throws ServletException
+     * @throws IOException
+     */
+    protected void login(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        /*
+        1、接受用户名和密码
+        2、调用服务层方法
+        3、判断密码是否匹配
+        5、跳转首页
+         */
+        String username = req.getParameter("username");
+        String userPwd = req.getParameter("userPwd");
+        SysUser loginUser =  userService.findByUsername(username);
+        if (null == loginUser){
+            resp.sendRedirect("/loginUsernameError.html");
+        }else if (! MD5Util.encrypt(userPwd).equals(loginUser.getUserPwd())){
+            resp.sendRedirect("/loginUserPwdError.html");
+        }else {
+            resp.sendRedirect("/showSchedule.html");
+        }
 
     }
 }

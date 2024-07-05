@@ -23,4 +23,9 @@ public class SysUserServiceImpl implements SysUserService {
         //将 sysUser 信息存入数据库(调用 Dao 层方法)
         return userDao.addSysUser(sysUser);
     }
+
+    @Override
+    public SysUser findByUsername(String username) {
+        return userDao.findByUsername(username);
+    }
 }

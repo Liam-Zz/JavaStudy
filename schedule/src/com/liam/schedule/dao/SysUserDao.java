@@ -16,4 +16,10 @@ public interface SysUserDao {
      */
     int addSysUser(SysUser sysUser);
 
+    /**
+     * 根据用户名获取完整用户信息
+     * @param username 要查询的用户名
+     * @return 如果找到了返回SysUser对象
+     */
+    SysUser findByUsername(String username);
 }
